@@ -1,10 +1,13 @@
 import React from 'react';
 import Au from '../../hoc/Au';
 import LayoutCss from './Layout.css';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
+import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 
 const layout = (props) => (
   <Au>
-    <div>Toolbar,Sidedrawer,Backdrop</div>
+    <Toolbar/>
+    <SideDrawer/>
     <main className="Content">
       {props.children}
     </main> 
