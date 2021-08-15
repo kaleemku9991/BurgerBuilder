@@ -6,11 +6,15 @@ import Backdrop from "../../UI/Backdrop/Backdrop";
 import Au from "../../../hoc/Au";
 
 const sideDrawer = (props) => {
+  let attachedClass=["SideDrawer","Close"];
+  if(props.open){
+    attachedClass=["SideDrawer","Open"];
+  }
 
   return (
     <Au>
-      <Backdrop show />
-      <div className="SideDrawer">
+      <Backdrop show={props.open} clicked={props.closed}/>
+      <div className={attachedClass.join(' ')}>
         <div className="Logo2">
           <Logo />
         </div>
